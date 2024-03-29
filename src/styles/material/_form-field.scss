@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+// Form Fields
+.mat-mdc-form-field {
+  // Density sets the height of the form fields
+  @include mat.form-field-density(-2);
+
+  // Override Shapes (Rounded borders)
+  --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-container-shape: 8px;
+
+  // Colors
+  --mdc-outlined-text-field-outline-color: #0000001f;
+
+  @apply w-full;
+}
+
+// Tailwind CSS version migration issue
+.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field
+  .mdc-notched-outline__notch {
+  border-right-style: hidden;
+}

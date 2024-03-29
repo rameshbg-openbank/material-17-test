@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+$primary-btn: mat.define-typography-level(
+  $font-family: inherit,
+  $font-weight: 400,
+  $font-size: 14px,
+  $line-height: inherit,
+  $letter-spacing: 'normal',
+);
+
+$primary-typography: mat.define-typography-config(
+  $font-family: inherit,
+  $body-1:
+    mat.define-typography-level(
+      $font-family: inherit,
+      $font-weight: 400,
+      $font-size: 0.875rem,
+      $line-height: 1.25rem,
+      $letter-spacing: normal,
+    ),
+  $body-2:
+    mat.define-typography-level(
+      $font-family: inherit,
+      $font-weight: 400,
+      $font-size: 0.875rem,
+      $line-height: 1.25rem,
+      $letter-spacing: normal,
+    ),
+  $button: $primary-btn,
+);

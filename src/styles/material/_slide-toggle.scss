@@ -1,0 +1,60 @@
+.mat-mdc-slide-toggle.mat-primary {
+  // Set Handle and Drag theme colors
+  --mdc-switch-unselected-handle-color: white;
+  --mdc-switch-selected-handle-color: white;
+  --mdc-switch-unselected-focus-handle-color: white;
+  --mdc-switch-unselected-hover-handle-color: white;
+  --mdc-switch-selected-focus-handle-color: white;
+  --mdc-switch-selected-hover-handle-color: white !important;
+  --mdc-switch-selected-pressed-handle-color: var(--primary-color);
+  --mdc-switch-selected-focus-track-color: var(--primary-color);
+  --mdc-switch-selected-hover-track-color: var(--primary-color) !important;
+  --mdc-switch-selected-pressed-track-color: white;
+  --mdc-switch-selected-track-color: var(--primary-color) !important;
+
+  //   Set Dimensions
+  --mdc-switch-track-width: 32px;
+  --mdc-switch-handle-width: 12px;
+  --mdc-switch-handle-height: 12px;
+  --mdc-switch-track-height: 16px;
+  --mdc-switch-track-shape: 10px;
+  --mdc-switch-unselected-icon-size: 12px;
+}
+
+body {
+  .mdc-switch__icons {
+    @apply opacity-0 hidden;
+  }
+
+  .mat-mdc-slide-toggle .mdc-form-field {
+    @apply w-full;
+  }
+
+  .mat-mdc-slide-toggle .mdc-switch {
+    width: var(--mdc-switch-track-width, 32px) !important;
+
+    .mdc-switch__handle {
+      width: var(--mdc-switch-handle-width, 12px) !important;
+      height: var(--mdc-switch-handle-height, 12px) !important;
+    }
+
+    .mdc-switch__handle-track {
+      width: calc(100% - var(--mdc-switch-handle-width, 14px)) !important;
+    }
+
+    .mdc-switch__track {
+      height: var(--mdc-switch-track-height, 16px) !important;
+      border-radius: var(--mdc-switch-track-shape, 10px) !important;
+    }
+    .mdc-switch--unselected .mdc-switch__icon {
+      width: var(--mdc-switch-unselected-icon-size, 12px) !important;
+      height: var(--mdc-switch-unselected-icon-size, 12px) !important;
+    }
+  }
+  .mdc-switch--unselected .mdc-switch__handle {
+    @apply left-0.5;
+  }
+  .mdc-switch--selected .mdc-switch__handle {
+    @apply -left-0.5;
+  }
+}

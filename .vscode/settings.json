@@ -1,0 +1,7 @@
+{
+  "editor.codeActionsOnSave": {},
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "scss.lint.unknownAtRules": "ignore"
+}

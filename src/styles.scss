@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use './styles/material/core';
+@use './styles/material/form-field';
+@use './styles/material/slide-toggle';
+
+$primary-color: #663399;
+$secondary-color: #ff1493;
+
+:root {
+  --primary-color: #663399;
+  --secondary-color: #ff1493;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// Import custom config files
+@import './palette';
+@import './typography';
+
+@include mat.core();
+@include mat.strong-focus-indicators();
+
+
+$app-primary: mat.define-palette($primary-palette, 500);
+$app-secondary: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$app-warn: mat.define-palette($warn-palette, A200, A100, A400);
+
+$app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-primary,
+      accent: $app-secondary,
+      warn: $app-warn,
+    ),
+    typography: $primary-typography,
+  )
+);
+
+@include mat.strong-focus-indicators(
+  (
+    border-style: none,
+    border-width: 0px,
+    border-radius: 0px,
+  )
+);
+
+@include mat.all-component-themes($app-theme);
+@include mat.strong-focus-indicators-theme($app-theme);
